@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Windows 객체: 전역 객체
+        alert("경고창을 한 번 띄워봅시다.");
+        if (confirm("정말 삭제하시겠습니까?")) {
+            //삭제 로직....
+        }
+        let pass = prompt("비밀번호를 입력하세요.")
+        if (pass == null) {
+            //취소 버튼을 누른 경우
+        } else if(pass == "") {
+            
+        }else if(pass != ""){
+            console.log(pass);
+        }
+        window.open("http://naver.com")
+
+        setTimeout(function(){
+            alert("프로그램 실행!")
+        },1000);
+
+        let count = 0;
+        let func = setInterval(function(){
+            if (count < 5) {
+                console.log("프로그램 실행:"+count);
+                count++
+            } else {
+                console.log("종료");
+                clearInterval(func);
+            }
+        },1000)
+    </script>    
+</body>
+</html>
